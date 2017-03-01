@@ -5,10 +5,10 @@ import Map from './map/Map';
 import {connect} from 'react-redux';
 
 
-const Wrapper = () => {
+const Wrapper = (props) => {
   return (
       <div className="wrapper">
-        <BinList></BinList>
+        <BinList bins={props.bins}></BinList>
         <Map></Map>
       </div>)
 };
