@@ -1,4 +1,4 @@
-import mockData from 'mockdata';
+import mockData from './mockdata';
 
 const reducer = (state = mockData, action ) => {
   switch(action.type) {
