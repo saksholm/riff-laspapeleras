@@ -1,7 +1,12 @@
 import React from 'react';
 import Map, {Marker, InfoWindow} from 'google-maps-react';
 
-export default class MapWrapper extends React.Component {
+import {emptyBin} from '../actions';
+import {connect} from 'react-redux';
+
+
+
+export class MapWrapper extends React.Component {
 
   constructor(props) {
     super(props);
@@ -12,13 +17,9 @@ export default class MapWrapper extends React.Component {
       }
     };
 
-
-    console.log(this.props);
-
-    console.log(<Marker name={'you are stupid marker'}/>);
-
   }
   onMarkerClick = (evt) => {
+    this.props.dispatch(emptyBin(evt.key));
     console.log("wattaaaa faaaak", evt.name);
   };
 
@@ -31,7 +32,7 @@ export default class MapWrapper extends React.Component {
     let arr = [];
 
     this.props.bins.map((bin) => {
-      arr.push(<Marker onClick={this.onMarkerClick} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
+      return arr.push(<Marker key={bin.id} onClick={this.onMarkerClick} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
     });
 
       return arr;
@@ -52,3 +53,11 @@ export default class MapWrapper extends React.Component {
     </div>)
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    bins: state.bins,
+  }
+};
+
+export default connect(mapStateToProps)(MapWrapper);
