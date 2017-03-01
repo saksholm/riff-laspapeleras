@@ -8,8 +8,8 @@ import {connect} from 'react-redux';
 const Wrapper = () => {
   return (
       <div className="wrapper">
-        <BinList></BinList>
-        <Map></Map>
+        <BinList/>
+        <Map/>
       </div>)
 };
 
