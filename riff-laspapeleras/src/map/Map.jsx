@@ -19,8 +19,8 @@ export class MapWrapper extends React.Component {
 
   }
   onMarkerClick = (evt) => {
-    this.props.dispatch(emptyBin(evt.key));
-    console.log("wattaaaa faaaak", evt.name);
+    this.props.dispatch(emptyBin(evt));
+    console.log("You clicked bin id/name", evt);
   };
 
   selectedPlace = () => {
@@ -32,7 +32,7 @@ export class MapWrapper extends React.Component {
     let arr = [];
 
     this.props.bins.map((bin) => {
-      return arr.push(<Marker key={bin.id} onClick={this.onMarkerClick} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
+      return arr.push(<Marker key={bin.id} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
     });
 
       return arr;
