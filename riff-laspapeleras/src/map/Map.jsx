@@ -41,8 +41,6 @@ export class MapWrapper extends React.Component {
   render() {
     return (<div className="map">
       <Map google={window.google} zoom={17} initialCenter={{lat: 28.149344, lng: -15.429630}} >
-
-        <Marker onClick={this.onMarkerClick} name={'Current location'} position={{lat: 28.149674, lng: -15.430141}} />
         {this.markerWrapper()}
         <InfoWindow onClose={this.onInfoWindowClose}>
           <div>
