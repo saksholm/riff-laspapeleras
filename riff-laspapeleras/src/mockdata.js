@@ -17,7 +17,7 @@ const initialState = {
         lng: -15.430525
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 0
+      percentFull: 10
     },
     {
       id: 'Fa0quohs',
@@ -28,7 +28,7 @@ const initialState = {
         lng: -15.431120
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 10
+      percentFull: 100
     },
     {
       id: 'shioTie7',
@@ -39,7 +39,7 @@ const initialState = {
         lng: -15.431415
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 20
+      percentFull: 100
     },
     {
       id: 'dieT5gak',
