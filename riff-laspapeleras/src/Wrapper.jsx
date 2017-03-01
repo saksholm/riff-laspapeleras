@@ -9,7 +9,7 @@ const Wrapper = (props) => {
   return (
       <div className="wrapper">
         <BinList bins={props.bins}></BinList>
-        <Map></Map>
+        <Map bins={props.bins} />
       </div>)
 };
 
