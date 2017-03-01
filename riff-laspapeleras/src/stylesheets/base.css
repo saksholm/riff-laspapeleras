@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+*, body, html {
+  color: $grey;
+  font-family: 'Open+Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.map {
+  flex: 1 0 auto;
+  height: 100vh;
+  background: #bbb;
+}
+
+.bin {
+  flex: 1 0 auto;
+  padding: 20px;
+  background: #ddd;
+}
