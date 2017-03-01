@@ -6,7 +6,7 @@ const reducer = (state = mockData, action ) => {
       return {
           ...state,
         bins: state.bins.map((bin) =>  (
-          (action.id !== bin.id ? {...bin, percentFull: 0} : bin)
+          (action.id === bin.id ? {...bin, percentFull: 0} : bin)
         ))
       }
 
