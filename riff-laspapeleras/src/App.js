@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import BinList from './bins/BinList';
-import Map from './map/Map';
 
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
+import reducer from './reducer';
+import Wrapper from './Wrapper';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="wrapper">
-        <BinList></BinList>
-        <Map></Map>
-      </div>
+const store = createStore(reducer);
+
+const App = () => {
+     return (
+         <Provider store={store}>
+           <Wrapper />
+         </Provider>
     );
-  }
-}
+
+};
 
 export default App;
