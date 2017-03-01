@@ -42,11 +42,13 @@ export class MapWrapper extends React.Component {
     return (<div className="map">
       <Map google={window.google} zoom={17} initialCenter={{lat: 28.149344, lng: -15.429630}} >
         {this.markerWrapper()}
+        {/*
         <InfoWindow onClose={this.onInfoWindowClose}>
           <div>
             <h1>some name</h1>
           </div>
         </InfoWindow>
+         */}
       </Map>
     </div>)
   }
