@@ -14,13 +14,13 @@
 }
 
 .map {
-  flex: 1 0 auto;
+  flex-grow: 2;
   height: 100vh;
   background: #bbb;
 }
 
-.bin {
-  flex: 1 0 auto;
+.binList {
+  flex-grow: 1;
   padding: 20px;
-  background: #ddd;
+  background: #f5f5f5;
 }
