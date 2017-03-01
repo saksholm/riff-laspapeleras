@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 const Wrapper = (props) => {
   return (
       <div className="wrapper">
-        <BinList bins={props.bins}></BinList>
+        <BinList bins={props.bins} />
         <Map bins={props.bins} />
       </div>)
 };

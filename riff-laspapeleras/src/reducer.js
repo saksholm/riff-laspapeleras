@@ -1,27 +1,6 @@
-const initialState = {
-  bins: [
-    {
-      name: 'bin1',
-      location: {
-        lat: 28.149527,
-        lng: -15.430525
-      },
-      imgUrl: '',
-      percentFull: 0
-    },
-    {
-      name: 'bin2',
-      location: {
-        lat: 28.148614,
-        lng: -15.431120
-      },
-      imgUrl: '',
-      percentFull: 10
-    }
-  ]
-};
+import mockData from 'mockdata';
 
-const reducer = (state = initialState, action ) => {
+const reducer = (state = mockData, action ) => {
   switch(action.type) {
     case 'EMPTY_BIN':
       return {}
