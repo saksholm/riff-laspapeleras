@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a8cf465-3e6d-4a78-8b49-59175e5c6ffe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/bins/Sliders.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/riff-laspapeleras/src/bins/BarIndicator.js" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/bins/BarIndicator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/riff-laspapeleras/src/bins/Slider.jsx" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/bins/Slider.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/riff-laspapeleras/src/bins/bin.js" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/bins/bin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/riff-laspapeleras/src/stylesheets/base.css" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/stylesheets/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx" afterPath="$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,110 +21,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BarIndicator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/BarIndicator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/bin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Slider.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/Slider.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sliders.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/Sliders.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Map.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/stylesheets/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="190" column="1" lean-forward="false" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/reducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BinList.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            <state relative-caret-position="15">
+              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -142,17 +51,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/index.css" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/map/BinMarker.jsx" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/public/vendors/map-icons-master/dist/js/map-icons.js" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/App.js" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/public/index.html" />
-        <option value="$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/bins/BarIndicator.js" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/bins/Slider.jsx" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/bins/bin.js" />
         <option value="$PROJECT_DIR$/riff-laspapeleras/src/stylesheets/base.css" />
+        <option value="$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx" />
+        <option value="$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx" />
       </list>
     </option>
   </component>
@@ -426,12 +335,12 @@
       <updated>1488377837002</updated>
       <workItem from="1488377838694" duration="697000" />
       <workItem from="1488455550913" duration="4000" />
-      <workItem from="1488455594720" duration="3577000" />
+      <workItem from="1488455594720" duration="3729000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4278000" />
+    <option name="totallyTimeSpent" value="4430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="735" extended-state="6" />
@@ -586,14 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/riff-laspapeleras/public/vendors/map-icons-master/example/example.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -618,14 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/riff-laspapeleras/public/vendors/map-icons-master/example/example.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -634,26 +527,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/App.js">
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/public/index.html">
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/stylesheets/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="531">
+          <caret line="190" column="1" lean-forward="false" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx">
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/Sliders.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="true" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/Slider.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/bin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -670,39 +579,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/Slider.jsx">
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        <state relative-caret-position="84">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/Sliders.jsx">
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/bin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/stylesheets/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="190" column="1" lean-forward="false" selection-start-line="190" selection-start-column="1" selection-end-line="190" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/bins/BinList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/riff-laspapeleras/src/map/Map.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
