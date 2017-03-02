@@ -5,7 +5,6 @@ import {emptyBin, updatePercent} from '../actions';
 import {connect} from 'react-redux';
 
 
-
 export class MapWrapper extends React.Component {
 
   constructor(props) {
@@ -16,6 +15,10 @@ export class MapWrapper extends React.Component {
         name: 'foobar'
       }
     };
+
+
+    console.log("BIN MARKER", <BinMarker />);
+
   }
 
   componentDidMount() {
@@ -63,6 +66,7 @@ export class MapWrapper extends React.Component {
 
     return (<div className="map">
       <Map google={window.google} zoom={17} minZoom={17} maxZoom={17} initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true} >
+        <BinMarker/>
         {this.markerWrapper()}
         {/*
         <InfoWindow onClose={this.onInfoWindowClose}>

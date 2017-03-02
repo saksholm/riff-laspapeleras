@@ -6,6 +6,8 @@ export const BarIndicator = styled.div`
   width: 100%;
   height: 30px;
   background: #eee;
+  border-radius: 15px;
+  margin-bottom: 20px;
 `;
 
 export const Indicator = styled.div`
