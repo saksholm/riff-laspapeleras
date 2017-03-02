@@ -20,7 +20,7 @@ export const changeFormula = (id, parameter, newValue) => {
     parameter,
     newValue
   }
-}
+};
 
 export const updateFullBins = (num) => {
   return {
