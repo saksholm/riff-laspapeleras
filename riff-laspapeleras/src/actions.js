@@ -5,7 +5,6 @@ export const emptyBin = (id) => {
   }
 };
 
-
 export const updatePercent = (id, percent) => {
   return {
     type: 'UPDATE_PERCENT',
@@ -14,10 +13,18 @@ export const updatePercent = (id, percent) => {
   }
 };
 
-export const changeFormula = (id, newValue) => {
+export const changeFormula = (id, parameter, newValue) => {
   return {
     type: 'CHANGE_FORMULA',
     id,
+    parameter,
     newValue
+  }
+}
+
+export const updateFullBins = (num) => {
+  return {
+    type: 'UPDATE_FULLBINS',
+    num
   }
 };

@@ -6,7 +6,7 @@ export default class BinList extends React.Component {
     return (
       <div className="binList">
         {this.props.bins.map((bin) => (
-          <Bin data={bin} key={bin.id}/>
+          <Bin data={bin} key={bin.id} formula={bin.formula}/>
         ))}
       </div>
     )

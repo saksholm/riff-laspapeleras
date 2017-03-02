@@ -4,7 +4,6 @@ import Slider from './Slider'
 import Sliders from './Sliders'
 
 export default class Bin extends React.Component {
-
     render() {
         const { data } = this.props;
         const style = {
@@ -21,7 +20,7 @@ export default class Bin extends React.Component {
             <BarIndicator>
               <Indicator width={data.percentFull}/>
             </BarIndicator>
-            <Sliders />
+            <Sliders data={this.props}/>
           </div>
 
 
