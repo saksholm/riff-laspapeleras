@@ -7,7 +7,7 @@ export const BarIndicator = styled.div`
   height: 30px;
   background: #eee;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 export const Indicator = styled.div`
