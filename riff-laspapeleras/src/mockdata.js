@@ -9,6 +9,8 @@
 const initialState = {
   upgradePrice: 5,
   balance: 120,
+  totalBins: 15,
+  fullBins: 0,
   bins: [
     {
       id: 'wei5ooYi',
@@ -22,6 +24,12 @@ const initialState = {
       percentFull: 10,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 10
     },
     {
       id: 'Fa0quohs',
@@ -35,6 +43,12 @@ const initialState = {
       percentFull: 100,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 100
     },
     {
       id: 'shioTie7',
@@ -48,6 +62,12 @@ const initialState = {
       percentFull: 100,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 100
     },
     {
       id: 'dieT5gak',
@@ -61,6 +81,12 @@ const initialState = {
       percentFull: 50,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 50
     },
     {
       id: 'BaiC2zoh',
@@ -74,6 +100,13 @@ const initialState = {
       percentFull: 30,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 30,
+      size: 100
     },
     {
       id: 'beeMo8al',
@@ -87,6 +120,12 @@ const initialState = {
       percentFull: 20,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 20
     },
     {
       id: 'biveib8E',
@@ -100,6 +139,12 @@ const initialState = {
       percentFull: 60,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 60
     },
     {
       id: 'noo5dooK',
@@ -113,6 +158,12 @@ const initialState = {
       percentFull: 40,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 40
     },
     {
       id: 'phie8UuF',
@@ -126,6 +177,12 @@ const initialState = {
       percentFull: 80,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 80
     },
     {
       id: 'aTee4uiv',
@@ -139,6 +196,12 @@ const initialState = {
       percentFull: 35,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 35
     },
     {
       id: 'Fei1mir9',
@@ -152,6 +215,12 @@ const initialState = {
       percentFull: 15,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 15
     },
     {
       id: 'aegohf0X',
@@ -165,6 +234,12 @@ const initialState = {
       percentFull: 60,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 60
     },
     {
       id: 'Aakeiy4u',
@@ -178,6 +253,12 @@ const initialState = {
       percentFull: 50,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 50
     },
     {
       id: 'omuL9viV',
@@ -191,6 +272,12 @@ const initialState = {
       percentFull: 30,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 30
     },
     {
       id: 'IeWev4ie',
@@ -204,6 +291,12 @@ const initialState = {
       percentFull: 30,
       size: 1,
       maxSize: 4,
+      formula: {
+        a:5,
+        b:0.5,
+        c:-1
+      },
+      percentFull: 30
     }
   ]
 };

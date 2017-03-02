@@ -1,7 +1,7 @@
 import React from 'react';
 import Map, {Marker, InfoWindow} from 'google-maps-react';
 
-import {emptyBin, updatePercent} from '../actions';
+import {emptyBin, updatePercent, updateFullBins} from '../actions';
 import {connect} from 'react-redux';
 
 
@@ -24,19 +24,30 @@ export class MapWrapper extends React.Component {
     setInterval(() => {
       this.props.bins.map((bin) => {
         if(bin.percentFull < 100) {
-          const newPercent = this.formula(bin.percentFull,5);
-          // console.log(bin.percentFull, newPercent);
+          const newPercent = this.formula(bin.percentFull, bin.formula);
+          console.log(bin.percentFull, newPercent);
           this.props.dispatch(updatePercent(bin.id, newPercent));
         }
       });
-    },100000);
+
+      this.countFullBins();
+    },1000);
   }
 
-  formula = (base, a) => {
-    const value = base + a;
+  formula = (base, formula) => {
+    const value = base + formula.a + formula.b - formula.c;
     return (value >= 100 ? 100 : value);
   };
 
+  countFullBins = () => {
+    const fullBins = this.props.bins.filter((bin) => {
+      if(bin.percentFull === 100) return bin;
+    }).length;
+
+    if(this.props.fullBins !== fullBins) {
+      this.props.dispatch(updateFullBins(fullBins));
+    }
+  };
 
   onMarkerClick = (id) => {
     this.props.dispatch(emptyBin(id));
@@ -79,6 +90,7 @@ export class MapWrapper extends React.Component {
 const mapStateToProps = (state) => {
   return {
     bins: state.bins,
+    fullBins: state.fullBins,
   }
 };
 

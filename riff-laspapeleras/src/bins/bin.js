@@ -5,39 +5,38 @@ import Sliders from './Sliders'
 import Upgrade from './Upgrade'
 import { upgradeBin } from '../actions'
 
-class Bin extends React.Component {
+export default class Bin extends React.Component {
+
     onUpgrade = () => {
       this.props.dispatch( upgradeBin( this.props.bin.id, this.props.upgradePrice ))
     }
 
     render() {
-        const { bin } = this.props;
+        const { data } = this.props;
         const style = {
-          width: `${bin.percentFull}%`
+          width: `${data.percentFull}%`
         }
         return (
         <div className="bin">
           <div className='image-indicator'>
             <div className='bin-image-wrapper'>
-              <img src={bin.imgUrl} alt=""/>
+              <img src={data.imgUrl} alt=""/>
             </div>
             <div className='bin-info'>
-              <h1>{bin.name}</h1>
-              <IndicatorHeader>{`${bin.percentFull}% full`}</IndicatorHeader>
+              <h1>{data.name}</h1>
+              <IndicatorHeader>{`${data.percentFull}% full`}</IndicatorHeader>
               <BarIndicator>
-                <Indicator width={bin.percentFull}/>
+                <Indicator width={data.percentFull}/>
               </BarIndicator>
             </div>
           </div>
 
           <div className='slider-panel'>
-            <Sliders />
-            { bin.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
+            <Sliders data={this.props}/>
+            { data.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
           </div>
 
         </div>
       )
     }
 }
-
-export default Bin
