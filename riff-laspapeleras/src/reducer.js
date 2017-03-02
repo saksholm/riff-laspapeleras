@@ -28,12 +28,8 @@ const reducer = (state = mockData, action ) => {
       return {
         ...state,
         bins: state.bins.map((bin) => {
-          console.log('___-> bin.formula', bin.formula);
-          console.log('___-> action', action);
           const formula = bin.formula;
-          console.log('___-> formula', formula);
           formula[action.parameter] = parseInt(action.newValue);
-          console.log('___-> formula', formula);
           return (action.id === bin.id ? {...bin, formula} : bin)
         })
       };
