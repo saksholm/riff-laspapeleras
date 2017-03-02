@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 export class Slider extends React.Component {
     onChange = (event) => {
-        console.log('___-> this.props.parameter', this.props.parameter);
         this.props.dispatch(changeFormula(this.props.id, this.props.parameter, event.target.value));
     }
 
@@ -12,7 +11,11 @@ export class Slider extends React.Component {
         return (
             <div className="slider">
                 <h3 className='parameter'>Parameter: a</h3>
-                <input type="range" {...this.props} onChange={this.onChange} data-parameter={this.props.parameter}/>
+                <input type="range"
+                       min={this.props.min}
+                       max={this.props.max}
+                       value={this.props.value}
+                       onChange={this.onChange} />
             </div>
         )
     }

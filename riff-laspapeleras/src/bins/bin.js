@@ -1,6 +1,5 @@
 import React from 'react';
-import {BarIndicator, Indicator, IndicatorHeader } from './BarIndicator'
-import Slider from './Slider'
+import {BarIndicator, Indicator, IndicatorHeader } from './BarIndicator';
 import Sliders from './Sliders'
 import Upgrade from './Upgrade'
 import { upgradeBin } from '../actions'
@@ -8,14 +7,11 @@ import { upgradeBin } from '../actions'
 export default class Bin extends React.Component {
 
     onUpgrade = () => {
-      this.props.dispatch( upgradeBin( this.props.bin.id, this.props.upgradePrice ))
+      this.props.dispatch( upgradeBin( this.props.data.id, this.props.upgradePrice ))
     }
 
     render() {
         const { data } = this.props;
-        const style = {
-          width: `${data.percentFull}%`
-        }
         return (
         <div className="bin">
           <div className='image-indicator'>
@@ -35,8 +31,6 @@ export default class Bin extends React.Component {
             <Sliders data={this.props}/>
             { data.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
           </div>
-
-        </div>
-      )
+        </div>)
     }
 }
