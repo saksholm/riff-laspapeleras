@@ -8,7 +8,15 @@ const reducer = (state = mockData, action ) => {
         bins: state.bins.map((bin) =>  (
           (action.id === bin.id ? {...bin, percentFull: 0} : bin)
         ))
-      }
+      };
+
+    case 'UPDATE_PERCENT':
+      return {
+          ...state,
+        bins: state.bins.map((bin) => (
+            (action.id === bin.id ? {...bin, percentFull: action.percent} : bin)
+        ))
+      };
 
     default:
       return state;

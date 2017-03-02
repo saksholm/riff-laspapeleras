@@ -61,7 +61,13 @@ const initialState = {
         lng: -15.429762
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 30
+      percentFull: 30,
+      formula: {
+        first: 123,
+        second: 11,
+        third: 11
+      },
+      size: 100
     },
     {
       id: 'beeMo8al',

@@ -4,3 +4,13 @@ export const emptyBin = (id) => {
     id: id
   }
 };
+
+
+export const updatePercent = (id, percent) => {
+
+  return {
+    type: 'UPDATE_PERCENT',
+    id,
+    percent
+  }
+};
