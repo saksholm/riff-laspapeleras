@@ -1,14 +1,10 @@
 import React from 'react';
-import {BarIndicator, Indicator, IndicatorHeader } from './BarIndicator'
-import Slider from './Slider'
+import {BarIndicator, Indicator, IndicatorHeader } from './BarIndicator';
 import Sliders from './Sliders'
 
 export default class Bin extends React.Component {
     render() {
         const { data } = this.props;
-        const style = {
-          width: `${data.percentFull}%`
-        }
         return (
         <div className="bin">
           <div className='bin-image-wrapper'>
@@ -22,9 +18,6 @@ export default class Bin extends React.Component {
             </BarIndicator>
             <Sliders data={this.props}/>
           </div>
-
-
-
         </div>)
     }
 }

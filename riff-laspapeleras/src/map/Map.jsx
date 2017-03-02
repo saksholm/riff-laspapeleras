@@ -25,7 +25,6 @@ export class MapWrapper extends React.Component {
       this.props.bins.map((bin) => {
         if(bin.percentFull < 100) {
           const newPercent = this.formula(bin.percentFull, bin.formula);
-          console.log(bin.percentFull, newPercent);
           this.props.dispatch(updatePercent(bin.id, newPercent));
         }
       });
@@ -51,7 +50,6 @@ export class MapWrapper extends React.Component {
 
   onMarkerClick = (id) => {
     this.props.dispatch(emptyBin(id));
-    console.log("You clicked bin id", id);
   };
 
   selectedPlace = () => {
