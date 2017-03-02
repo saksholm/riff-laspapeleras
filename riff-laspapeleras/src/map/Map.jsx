@@ -15,7 +15,7 @@ export class MapWrapper extends React.Component {
         name: 'foobar'
       }
     };
-    
+
   }
 
   componentDidMount() {
@@ -25,11 +25,11 @@ export class MapWrapper extends React.Component {
       this.props.bins.map((bin) => {
         if(bin.percentFull < 100) {
           const newPercent = this.formula(bin.percentFull,5);
-          console.log(bin.percentFull, newPercent);
+          // console.log(bin.percentFull, newPercent);
           this.props.dispatch(updatePercent(bin.id, newPercent));
         }
       });
-    },1000);
+    },100000);
   }
 
   formula = (base, a) => {
@@ -62,7 +62,7 @@ export class MapWrapper extends React.Component {
   render() {
 
     return (<div className="map">
-      <Map google={window.google} zoom={17} minZoom={17} maxZoom={17} initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true} >
+      <Map google={window.google} zoom={18} minZoom={18} maxZoom={18} initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true} >
         {this.markerWrapper()}
         {/*
         <InfoWindow onClose={this.onInfoWindowClose}>

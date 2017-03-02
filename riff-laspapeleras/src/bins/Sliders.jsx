@@ -17,7 +17,7 @@ const sliders = [
 ]
 
 const Sliders = (data) => (
-  <div className="bin-sliders">
+  <div className='bin-sliders'>
     { sliders.map( (slider) => (
       <div key={slider.id}>
         <Slider

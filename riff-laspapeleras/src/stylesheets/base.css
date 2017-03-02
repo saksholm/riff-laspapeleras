@@ -32,15 +32,22 @@
 }
 
 .bin {
-  display: flex;
+  width: 100%;
   margin-bottom: 20px;
   background: white;
   padding: 20px;
   border-radius: 5px;
 }
 
+.image-indicator {
+  width: 100%;
+}
+
 .bin-image-wrapper {
-  width: 50%;
+  float: left;
+  display: inline-block;
+  margin-right: 20px;
+  width: 15%;
 }
 
 .bin-image-wrapper img {
@@ -48,7 +55,8 @@
 }
 
 .bin-info {
-  width:50%;
+  display: inline-block;
+  width:75%;
   padding-left: 20px;
 }
 
@@ -73,8 +81,12 @@
   background: green;
 }
 
-.bin-sliders {
+.slider-panel {
   width: 100%;
+}
+
+.bin-sliders {
+  width: 50%;
 }
 
 .slider {
@@ -83,6 +95,18 @@
 
 .slider input {
   width: 100%;
+}
+
+.wallet {
+  padding: 20px;
+  background: white;
+  color: #666;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.buy-upgrade {
+  width: 45%;
 }
 
 input[type=range] {
@@ -192,6 +216,25 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .parameter {
-  margin-bottom: 20px;
   color: #666;
+}
+
+.buy-upgrade h3 {
+  display: inline;
+  color: #666;
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 7px 15px;
+  color: white;
+  background: #3FC1C9;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0,0,0, 0.5);
+  font-size: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0,0,0, 0.7);
 }

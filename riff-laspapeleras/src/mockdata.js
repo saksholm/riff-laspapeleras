@@ -7,6 +7,8 @@
  */
 
 const initialState = {
+  upgradePrice: 5,
+  balance: 120,
   bins: [
     {
       id: 'wei5ooYi',
@@ -17,7 +19,9 @@ const initialState = {
         lng: -15.430525
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 10
+      percentFull: 10,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'Fa0quohs',
@@ -28,7 +32,9 @@ const initialState = {
         lng: -15.431120
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 100
+      percentFull: 100,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'shioTie7',
@@ -39,7 +45,9 @@ const initialState = {
         lng: -15.431415
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 100
+      percentFull: 100,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'dieT5gak',
@@ -50,7 +58,9 @@ const initialState = {
         lng: -15.429192
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 50
+      percentFull: 50,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'BaiC2zoh',
@@ -62,12 +72,8 @@ const initialState = {
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 30,
-      formula: {
-        first: 123,
-        second: 11,
-        third: 11
-      },
-      size: 100
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'beeMo8al',
@@ -78,7 +84,9 @@ const initialState = {
         lng: -15.429607
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 20
+      percentFull: 20,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'biveib8E',
@@ -89,7 +97,9 @@ const initialState = {
         lng: -15.428235
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 60
+      percentFull: 60,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'noo5dooK',
@@ -100,7 +110,9 @@ const initialState = {
         lng: -15.428616
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 40
+      percentFull: 40,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'phie8UuF',
@@ -111,7 +123,9 @@ const initialState = {
         lng: -15.432483
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 80
+      percentFull: 80,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'aTee4uiv',
@@ -122,7 +136,9 @@ const initialState = {
         lng: -15.429490
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 35
+      percentFull: 35,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'Fei1mir9',
@@ -133,7 +149,9 @@ const initialState = {
         lng: -15.427323
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 15
+      percentFull: 15,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'aegohf0X',
@@ -144,7 +162,9 @@ const initialState = {
         lng: -15.429866
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 60
+      percentFull: 60,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'Aakeiy4u',
@@ -155,7 +175,9 @@ const initialState = {
         lng: -15.427559
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 50
+      percentFull: 50,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'omuL9viV',
@@ -166,7 +188,9 @@ const initialState = {
         lng: -15.429512
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 30
+      percentFull: 30,
+      size: 1,
+      maxSize: 4,
     },
     {
       id: 'IeWev4ie',
@@ -177,7 +201,9 @@ const initialState = {
         lng: -15.431336
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 30
+      percentFull: 30,
+      size: 1,
+      maxSize: 4,
     }
   ]
 };

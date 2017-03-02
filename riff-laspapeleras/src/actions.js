@@ -14,3 +14,9 @@ export const updatePercent = (id, percent) => {
     percent
   }
 };
+
+export const upgradeBin = ( id, upgradePrice ) => ({
+  type: 'UPGRADE_BIN',
+  id,
+  upgradePrice
+})
