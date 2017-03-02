@@ -9,7 +9,7 @@ class BinList extends React.Component {
       <div className="binList">
         <Wallet balance={this.props.balance} />
         {this.props.bins.map((bin) => (
-          <Bin data={bin} key={bin.id} formula={bin.formula} {...this.props}/>
+          <Bin data={bin} key={bin.id} {...this.props}/>
         ))}
       </div>
     )

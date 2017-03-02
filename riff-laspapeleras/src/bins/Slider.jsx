@@ -2,7 +2,7 @@ import React from 'react';
 import { changeFormula } from '../actions';
 import {connect} from 'react-redux';
 
-export class Slider extends React.Component {
+export default class Slider extends React.Component {
     onChange = (event) => {
         this.props.dispatch(changeFormula(this.props.id, this.props.parameter, event.target.value));
     }
@@ -10,7 +10,7 @@ export class Slider extends React.Component {
     render() {
         return (
             <div className="slider">
-                <h3 className='parameter'>Parameter: a</h3>
+                <h3 className='parameter'>Parameter: {this.props.parameter}</h3>
                 <input type="range"
                        min={this.props.min}
                        max={this.props.max}
@@ -20,11 +20,3 @@ export class Slider extends React.Component {
         )
     }
 }
-
-const mapStateToProps = (state) => {
-    return {
-        bins: state.bins,
-    }
-};
-
-export default connect(mapStateToProps)(Slider);
