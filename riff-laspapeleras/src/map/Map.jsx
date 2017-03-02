@@ -1,7 +1,7 @@
 import React from 'react';
 import Map, {Marker, InfoWindow} from 'google-maps-react';
 
-import {emptyBin, updatePercent} from '../actions';
+import {emptyBin, updatePercent, updateFullBins} from '../actions';
 import {connect} from 'react-redux';
 
 
@@ -15,7 +15,7 @@ export class MapWrapper extends React.Component {
         name: 'foobar'
       }
     };
-    
+
   }
 
   componentDidMount() {
@@ -29,6 +29,8 @@ export class MapWrapper extends React.Component {
           this.props.dispatch(updatePercent(bin.id, newPercent));
         }
       });
+
+      this.countFullBins();
     },1000);
   }
 
@@ -37,6 +39,13 @@ export class MapWrapper extends React.Component {
     return (value >= 100 ? 100 : value);
   };
 
+  countFullBins = () => {
+    const fullBins = this.props.bins.filter((bin) => {
+      if(bin.percentFull === 100) return bin;
+    }).length;
+
+    this.props.dispatch(updateFullBins(fullBins));
+  };
 
   onMarkerClick = (id) => {
     this.props.dispatch(emptyBin(id));

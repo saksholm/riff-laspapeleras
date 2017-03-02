@@ -18,6 +18,12 @@ const reducer = (state = mockData, action ) => {
         ))
       };
 
+    case 'UPDATE_FULLBINS':
+      return {
+          ...state,
+        fullBins: action.num
+      };
+
     default:
       return state;
   }

@@ -7,6 +7,8 @@
  */
 
 const initialState = {
+  totalBins: 15,
+  fullBins: 0,
   bins: [
     {
       id: 'wei5ooYi',
