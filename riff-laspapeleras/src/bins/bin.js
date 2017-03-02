@@ -1,6 +1,6 @@
 import React from 'react';
 import {BarIndicator, Indicator, IndicatorHeader } from './BarIndicator'
-import Slider from './Slider'
+import Sliders from './Sliders'
 
 export default class Bin extends React.Component {
 
@@ -20,18 +20,8 @@ export default class Bin extends React.Component {
             <BarIndicator>
               <Indicator width={data.percentFull}/>
             </BarIndicator>
-            <div className="bin-sliders">
-              <Slider
-                min="0"
-                max="10"
-                value="3"
-                id="1"
-              />
-            </div>
+            <Sliders />
           </div>
-
-
-
         </div>)
     }
 }
