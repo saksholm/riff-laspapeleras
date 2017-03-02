@@ -21,7 +21,6 @@ const initialState = {
         lng: -15.430525
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 10,
       size: 1,
       maxSize: 4,
       formula: {
@@ -40,7 +39,6 @@ const initialState = {
         lng: -15.431120
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 100,
       size: 1,
       maxSize: 4,
       formula: {
@@ -48,7 +46,7 @@ const initialState = {
         b:0.5,
         c:-1
       },
-      percentFull: 100
+      percentFull: 10
     },
     {
       id: 'shioTie7',
@@ -59,7 +57,6 @@ const initialState = {
         lng: -15.431415
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 100,
       size: 1,
       maxSize: 4,
       formula: {
@@ -67,7 +64,7 @@ const initialState = {
         b:0.5,
         c:-1
       },
-      percentFull: 100
+      percentFull: 10
     },
     {
       id: 'dieT5gak',
@@ -78,7 +75,6 @@ const initialState = {
         lng: -15.429192
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 50,
       size: 1,
       maxSize: 4,
       formula: {
@@ -97,7 +93,6 @@ const initialState = {
         lng: -15.429762
       },
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
-      percentFull: 30,
       size: 1,
       maxSize: 4,
       formula: {
@@ -125,7 +120,6 @@ const initialState = {
         b:0.5,
         c:-1
       },
-      percentFull: 20
     },
     {
       id: 'biveib8E',
@@ -143,8 +137,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 60
+      }
     },
     {
       id: 'noo5dooK',
@@ -162,8 +155,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 40
+      }
     },
     {
       id: 'phie8UuF',
@@ -181,8 +173,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 80
+      }
     },
     {
       id: 'aTee4uiv',
@@ -219,8 +210,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 15
+      }
     },
     {
       id: 'aegohf0X',
@@ -238,8 +228,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 60
+      }
     },
     {
       id: 'Aakeiy4u',
@@ -257,8 +246,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 50
+      }
     },
     {
       id: 'omuL9viV',
@@ -276,8 +264,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 30
+      }
     },
     {
       id: 'IeWev4ie',
@@ -295,8 +282,7 @@ const initialState = {
         a:5,
         b:0.5,
         c:-1
-      },
-      percentFull: 30
+      }
     }
   ]
 };
