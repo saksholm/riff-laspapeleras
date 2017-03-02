@@ -7,7 +7,7 @@ export const BarIndicator = styled.div`
   height: 30px;
   background: #eee;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 `;
 
 export const Indicator = styled.div`
@@ -16,5 +16,11 @@ export const Indicator = styled.div`
   left: 0;
   width: ${ props => props.width }%;
   height: 30px;
+  border-radius: 15px;
   background: hsl(${ props => 120-props.width*120/100}, 100%, 50%);
 `;
+
+export const  IndicatorHeader = styled.h3`
+  color: #666;
+  margin-bottom: 5px;
+`

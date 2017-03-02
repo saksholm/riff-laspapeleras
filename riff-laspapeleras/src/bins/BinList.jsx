@@ -1,5 +1,5 @@
 import React from 'react';
-import Bin from './bin';
+import Bin from './Bin';
 
 export default class BinList extends React.Component {
   render() {
