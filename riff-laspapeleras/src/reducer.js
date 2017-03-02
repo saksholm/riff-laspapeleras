@@ -56,9 +56,9 @@ const reducer = (state = mockData, action ) => {
       return {
         ...state,
         bins: state.bins.map((bin) => {
-          const formula = bin.formula;
+          const formula = {...bin.formula};
           formula[action.parameter] = parseInt(action.newValue);
-          return (action.id === bin.id ? {...bin, formula} : bin)
+          return (action.id === bin.name ? {...bin, formula} : bin)
         })
       };
 
