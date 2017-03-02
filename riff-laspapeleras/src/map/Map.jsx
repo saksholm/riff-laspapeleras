@@ -38,9 +38,9 @@ export class MapWrapper extends React.Component {
   };
 
 
-  onMarkerClick = (evt) => {
-    this.props.dispatch(emptyBin(evt));
-    console.log("You clicked bin id/name", evt);
+  onMarkerClick = (id) => {
+    this.props.dispatch(emptyBin(id));
+    console.log("You clicked bin id", id);
   };
 
   selectedPlace = () => {
