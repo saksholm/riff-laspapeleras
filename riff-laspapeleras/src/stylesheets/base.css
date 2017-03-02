@@ -19,10 +19,16 @@
   background: #bbb;
 }
 
+.map > div:first-of-type {
+  width: 60% !important;
+}
+
 .binList {
   width: 40%;
   padding: 20px;
   background: #ccc;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .bin {
