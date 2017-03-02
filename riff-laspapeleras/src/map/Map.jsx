@@ -5,7 +5,6 @@ import {emptyBin, updatePercent} from '../actions';
 import {connect} from 'react-redux';
 
 
-
 export class MapWrapper extends React.Component {
 
   constructor(props) {
@@ -16,6 +15,7 @@ export class MapWrapper extends React.Component {
         name: 'foobar'
       }
     };
+    
   }
 
   componentDidMount() {
