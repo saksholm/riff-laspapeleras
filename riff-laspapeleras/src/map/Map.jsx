@@ -44,7 +44,9 @@ export class MapWrapper extends React.Component {
       if(bin.percentFull === 100) return bin;
     }).length;
 
-    this.props.dispatch(updateFullBins(fullBins));
+    if(this.props.fullBins !== fullBins) {
+      this.props.dispatch(updateFullBins(fullBins));
+    }
   };
 
   onMarkerClick = (id) => {
@@ -88,6 +90,7 @@ export class MapWrapper extends React.Component {
 const mapStateToProps = (state) => {
   return {
     bins: state.bins,
+    fullBins: state.fullBins,
   }
 };
 
