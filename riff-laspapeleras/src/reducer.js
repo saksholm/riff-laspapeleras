@@ -55,12 +55,15 @@ const reducer = (state = mockData, action ) => {
     case 'CHANGE_FORMULA':
       return {
         ...state,
-        bins: state.bins.map((bin) => {
-          const formula = bin.formula;
-          formula[action.parameter] = parseInt(action.newValue);
-          return (action.id === bin.id ? {...bin, formula} : bin)
-        })
-      };
+        bins: state.bins.map((bin) => (
+          bin.id === action.id
+            ? bin => ({
+                ...bin,
+                formula: action.newValue
+              })
+            : bin
+        ))
+      }
 
     default:
       return state;

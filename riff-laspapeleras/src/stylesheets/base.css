@@ -217,6 +217,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .parameter {
   color: #666;
+  margin-bottom: 5px;
 }
 
 .buy-upgrade h3 {
