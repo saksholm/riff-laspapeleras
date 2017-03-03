@@ -19,16 +19,21 @@ const reducer = (state = mockData, action ) => {
       return {
           ...state,
         bins: state.bins.map((bin) =>  (
-          (action.id === bin.id ? {...bin, percentFull: 0} : bin)
+          (action.id === bin.id ? {...bin, percentFull: 0, count: 0} : bin)
         ))
       };
 
-    case 'UPDATE_PERCENT':
+    case 'UPDATE_COUNT':
       return {
           ...state,
-        bins: state.bins.map((bin) => (
-            (action.id === bin.id ? {...bin, percentFull: action.percent} : bin)
-        ))
+        bins: state.bins.map((bin) => {
+          if(action.id === bin.id) {
+            let percent = Math.ceil(bin.count / bin.size);
+            return {...bin, percentFull: percent, count: action.count}
+          } else {
+            return bin;
+          }
+        })
       };
 
     case 'UPGRADE_BIN':
@@ -40,7 +45,9 @@ const reducer = (state = mockData, action ) => {
             ? {
                 ...bin,
                 imgUrl: getImageUrl(bin.size+1),
-                size: bin.size + 1
+                size: bin.size + 1,
+                count: 0,
+                percentFull: 0
               }
             : bin
         ))

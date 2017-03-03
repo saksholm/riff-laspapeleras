@@ -12,6 +12,7 @@ export default class Bin extends React.Component {
 
     render() {
         const { data } = this.props;
+        const disp = data.percentFull; // parseFloat(data.percentFull).toFixed(1);
         return (
         <div className="bin">
           <div className='image-indicator'>
@@ -21,7 +22,7 @@ export default class Bin extends React.Component {
             <div className='bin-info'>
               <h1>{data.name}</h1>
               { data.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
-              <IndicatorHeader>{`${data.percentFull}% full`}</IndicatorHeader>
+              <IndicatorHeader>{`${disp}% full`}</IndicatorHeader>
               <BarIndicator>
                 <Indicator width={data.percentFull}/>
               </BarIndicator>

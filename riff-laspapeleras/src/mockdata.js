@@ -13,7 +13,7 @@ const initialState = {
   fullBins: 0,
   timeElapsed: 0,
   maxFullBins: 3,
-  maxBinsDisplayed: 5,
+  maxBinsDisplayed: 1,
   bins: [
     {
       id: 'wei5ooYi',
@@ -133,6 +133,7 @@ initialState.bins.forEach((bin, index)=>{
   bin.formula.c = Math.floor(Math.random()*6-3);
   bin.size = 1;
   bin.percentFull = Math.floor(Math.random()*35);
+  bin.count = 0;
   bin.maxSize = 4;
   bin.imgUrl = 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg';
   bin.displayed ? null : bin.displayed = false;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Map, {Marker, InfoWindow} from 'google-maps-react';
 
-import {emptyBin, updatePercent, updateFullBins, increaseCoins} from '../actions';
+import {emptyBin, updateCount, updateFullBins, increaseCoins} from '../actions';
 import {connect} from 'react-redux';
 
 
@@ -22,9 +22,8 @@ export class MapWrapper extends React.Component {
 
     this.mainInterval = setInterval(() => {
       this.props.bins.map((bin) => {
-        if(bin.percentFull < 100 && bin.displayed) {
-          const newPercent = this.formula(bin.percentFull, bin.formula);
-          this.props.dispatch(updatePercent(bin.id, newPercent));
+        if((bin.count/bin.size) < 100 && bin.displayed) {
+          this.props.dispatch(updateCount(bin.id, this.formula(bin.count, bin.formula)));
         }
       });
 
@@ -52,14 +51,16 @@ export class MapWrapper extends React.Component {
     if (change < 2) {
       change = 2;
     }
+
     const randomness = Math.random() > 0.5 ? 1: 0;
     let newValue = value + change + randomness;
-    if (newValue > 100) {
-      newValue = 100;
+    if (newValue > 400) {
+      newValue = 400;
     }
     if (newValue < 1) {
       newValue = 1;
     }
+
     return newValue;
   };
 
@@ -115,8 +116,8 @@ export class MapWrapper extends React.Component {
     const displayedBins = this.props.bins.filter((bin) => {
       return bin.displayed;
     });
-    displayedBins.map((bin) => {
-      return arr.push(<Marker key={bin.id} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
+    displayedBins.map((bin,index) => {
+      return arr.push(<Marker key={"marker"+index} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
     });
       return arr;
   };

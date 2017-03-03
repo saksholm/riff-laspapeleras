@@ -3,10 +3,10 @@ export const emptyBin = (id) => ({
   id: id
 })
 
-export const updatePercent = (id, percent) => ({
-  type: 'UPDATE_PERCENT',
+export const updateCount = (id, count) => ({
+  type: 'UPDATE_COUNT',
   id,
-  percent
+  count
 })
 
 export const upgradeBin = ( id, upgradePrice ) => ({

@@ -5,9 +5,10 @@ const Sliders = ({data}) => {
     const parameters = Object.keys(data.data.formula);
     return (
         <div className="bin-sliders">
-            { parameters.map( (parameter) => (
-                <div key={parameter}>
+            { parameters.map( (parameter, index) => (
+
                     <Slider
+                        key={"parameter"+index}
                         {...data}
                         id={data.data.name}
                         parameter={ parameter }
@@ -15,7 +16,7 @@ const Sliders = ({data}) => {
                         max={ 3 }
                         value={ data.data.formula[parameter]}
                     />
-                </div>
+
             ))}
         </div>
     )
