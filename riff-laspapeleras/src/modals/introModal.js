@@ -27,7 +27,7 @@ export default class IntroModal extends React.Component {
                 className="modal"
             >
                 <div className="title">
-                    <h1>Las Papeleras</h1>
+                    <h1>LasPapeleras</h1>
                 </div>
                 <div className="modal-content">
                     <br/>
@@ -47,7 +47,7 @@ export default class IntroModal extends React.Component {
                     <br/><hr/><br/> 
                     <h2> HOW LONG CAN YOU KEEP LAS PALMAS CLEAN? </h2>
 
-                    <button onClick={this.closeModal}>LET'S PLAY</button>
+                    <button id='button' onClick={this.closeModal}><span>LET'S PLAY</span></button>
                 </div>
             </Modal>
         )
