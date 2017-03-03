@@ -20,8 +20,8 @@ export default class Bin extends React.Component {
               <img src={data.imgUrl} alt=""/>
             </div>
             <div className='bin-info'>
-              <h1>{data.name}</h1>
-              { data.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
+              <h1>{data.name}, size: {data.size}</h1>
+              { (data.size < 4 && data.percentFull < 100) && <Upgrade onUpgrade={ this.onUpgrade }/> }
               <IndicatorHeader>{`${disp}% full`}</IndicatorHeader>
               <BarIndicator>
                 <Indicator width={data.percentFull}/>

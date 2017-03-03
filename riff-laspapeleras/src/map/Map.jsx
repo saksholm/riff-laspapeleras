@@ -22,8 +22,10 @@ export class MapWrapper extends React.Component {
 
     this.mainInterval = setInterval(() => {
       this.props.bins.map((bin) => {
-        if((bin.count/bin.size) < 100 && bin.displayed) {
-          this.props.dispatch(updateCount(bin.id, this.formula(bin.count, bin.formula)));
+        let limit = bin.size * 100;
+
+        if((bin.count/bin.size) < limit && bin.displayed) {
+          this.props.dispatch(updateCount(bin.id, this.formula(bin.count, bin.formula, bin.size)));
         }
       });
 
@@ -42,7 +44,7 @@ export class MapWrapper extends React.Component {
   
   
 
-  formula = (value, formula) => {
+  formula = (value, formula, binSize) => {
     let change = 5 +  Math.pow(formula[Object.keys(formula)[0]],2) + Math.pow(formula[Object.keys(formula)[1]],3) - (formula[Object.keys(formula)[2]])
         ;
     if (change > 7) {
@@ -54,13 +56,20 @@ export class MapWrapper extends React.Component {
 
     const randomness = Math.random() > 0.5 ? 1: 0;
     let newValue = value + change + randomness;
-    if (newValue > 400) {
-      newValue = 400;
+    switch(binSize) {
+      case 1:
+        if(newValue > 100) newValue = 100;
+      case 2:
+        if(newValue > 200) newValue = 200;
+      case 3:
+        if(newValue > 300) newValue = 300;
+      case 4:
+        if(newValue > 400) newValue = 400;
     }
+
     if (newValue < 1) {
       newValue = 1;
     }
-
     return newValue;
   };
 
