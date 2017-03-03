@@ -4,15 +4,21 @@ import Wallet from '../wallet/Wallet'
 import {connect} from 'react-redux';
 
 class BinList extends React.Component {
+
+    filterDisplayedBins() {
+        return this.props.bins.filter((bin) => {
+            return bin.displayed === true
+        })
+    }
+
   render() {
     return (
       <div className="binList">
         <Wallet balance={this.props.balance} />
-        {this.props.bins.map((bin) => {
-            if (bin.displayed === true){
+        {this.filterDisplayedBins().map((bin) => {
                return <Bin data={bin} key={bin.id} {...this.props}/>
-            }}
-        )}
+            })
+        }
       </div>
     )
   }

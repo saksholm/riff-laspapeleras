@@ -20,8 +20,7 @@ export class MapWrapper extends React.Component {
 
   componentDidMount() {
 
-    // MAIN INTERVAL
-    setInterval(() => {
+    this.mainInterval = setInterval(() => {
       this.props.bins.map((bin) => {
         if(bin.percentFull < 100 && bin.displayed) {
           const newPercent = this.formula(bin.percentFull, bin.formula);
@@ -32,13 +31,11 @@ export class MapWrapper extends React.Component {
       this.countFullBins();
     },1000);
 
-    // BIN ADDING INTERVAL
-    setInterval(() => {
+    this.binAddingInterval = setInterval(() => {
       let displayedBins = this.props.bins.filter((bin) => {
         return bin.displayed;
       });
-      const maxBinsDisplayed = 3;
-      if (displayedBins.length <= maxBinsDisplayed) {
+      if (displayedBins.length <= this.props.maxBinsDisplayed) {
         this.props.bins[displayedBins.length].displayed = true;
       }
     }, 5000);
@@ -74,6 +71,11 @@ export class MapWrapper extends React.Component {
     if(this.props.fullBins !== fullBins) {
       this.props.dispatch(updateFullBins(fullBins));
     }
+    if (fullBins === this.props.maxFullBins) {
+      // alert('YOU LOST!!!!!')
+      // clearInterval(this.mainInterval);
+      // clearInterval(this.binAddingInterval);
+    }
   };
 
   onMarkerClick = (id) => {
@@ -93,7 +95,6 @@ export class MapWrapper extends React.Component {
     displayedBins.map((bin) => {
       return arr.push(<Marker key={bin.id} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
     });
-
       return arr;
   };
 
@@ -119,6 +120,8 @@ const mapStateToProps = (state) => {
   return {
     bins: state.bins,
     fullBins: state.fullBins,
+    maxFullBins: state.maxFullBins,
+    maxBinsDisplayed: state.maxBinsDisplayed
   }
 };
 

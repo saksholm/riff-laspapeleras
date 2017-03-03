@@ -11,6 +11,8 @@ const initialState = {
   balance: 120,
   totalBins: 15,
   fullBins: 0,
+  maxFullBins: 3,
+  maxBinsDisplayed: 5,
   bins: [
     {
       id: 'wei5ooYi',
