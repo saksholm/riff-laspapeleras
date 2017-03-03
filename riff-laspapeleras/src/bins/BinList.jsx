@@ -7,7 +7,8 @@ class BinList extends React.Component {
   render() {
     return (
       <div className="binList">
-        <Wallet balance={this.props.balance} />
+        <Wallet balance={this.props.balance} fullBins={this.props.fullBins}/>
+
         {this.props.bins.map((bin) => {
             if (bin.displayed === true){
                return <Bin data={bin} key={bin.id} {...this.props}/>
@@ -22,7 +23,8 @@ const mapStateToProps = (state) => {
   return {
     bins: state.bins,
     balance: state.balance,
-    upgradePrice: state.upgradePrice
+    upgradePrice: state.upgradePrice,
+    fullBins: state.fullBins
   }
 };
 

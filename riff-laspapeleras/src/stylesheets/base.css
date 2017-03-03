@@ -110,6 +110,11 @@
   border-radius: 5px;
 }
 
+.full-bins {
+  margin-bottom: 17px;
+  margin-top: 7px;
+}
+
 
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
@@ -244,4 +249,8 @@ input[type=range]:focus::-ms-fill-upper {
 .btn:hover {
   cursor: pointer;
   box-shadow: 1px 1px 2px rgba(0,0,0, 0.7);
+}
+
+.game-over h1 {
+  color: red;
 }

@@ -11,6 +11,7 @@ const initialState = {
   balance: 120,
   totalBins: 15,
   fullBins: 0,
+  timeElapsed: 0,
   bins: [
     {
       id: 'wei5ooYi',
