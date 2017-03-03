@@ -18,8 +18,6 @@ const FullBins = ({ fullBins }) => {
   const arr = []
   for (let i=1; i<=tempFullBins; i++) { arr.push(i) }
 
-  console.log(`arr`, arr);
-
   return (
     <div className='full-bins'>
       {arr.map( (item, index) => <BinIndicator key={index}/> )}

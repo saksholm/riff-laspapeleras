@@ -31,3 +31,7 @@ export const increaseCoins = (num) => ({
   type: 'INCREASE_COINS',
   num
 });
+
+export const closeIntroModal = () => ({
+  type: 'CLOSE_INTRO_MODAL',
+});

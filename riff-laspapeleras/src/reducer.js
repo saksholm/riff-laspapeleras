@@ -68,6 +68,12 @@ const reducer = (state = mockData, action ) => {
         balance: state.balance + action.num
       };
 
+    case 'CLOSE_INTRO_MODAL':
+      return {
+          ...state,
+        introModalOpen: !state.introModalOpen
+      };
+
     default:
       return state;
   }
