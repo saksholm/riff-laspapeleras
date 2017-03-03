@@ -1,5 +1,5 @@
 import React from 'react';
-import Map, {Marker, InfoWindow} from 'google-maps-react';
+import Map, {Marker} from 'google-maps-react';
 
 import {emptyBin, updateCount, updateFullBins, increaseCoins} from '../actions';
 import {connect} from 'react-redux';
@@ -24,9 +24,10 @@ export class MapWrapper extends React.Component {
       this.props.bins.map((bin) => {
         let limit = bin.size * 100;
 
-        if((bin.count/bin.size) < limit && bin.displayed) {
+        if(bin.count <= limit && bin.displayed) {
           this.props.dispatch(updateCount(bin.id, this.formula(bin.count, bin.formula, bin.size)));
         }
+        return true;
       });
 
       this.countFullBins();
@@ -57,14 +58,19 @@ export class MapWrapper extends React.Component {
     const randomness = Math.random() > 0.5 ? 1: 0;
     let newValue = value + change + randomness;
     switch(binSize) {
+      default:
       case 1:
         if(newValue > 100) newValue = 100;
+        break;
       case 2:
         if(newValue > 200) newValue = 200;
+        break;
       case 3:
         if(newValue > 300) newValue = 300;
+        break;
       case 4:
         if(newValue > 400) newValue = 400;
+        break;
     }
 
     if (newValue < 1) {
