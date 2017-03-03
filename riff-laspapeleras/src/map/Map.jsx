@@ -86,6 +86,17 @@ export class MapWrapper extends React.Component {
 
   };
 
+  returnBinImage(percentFull) {
+    if ( percentFull >= 99) {
+      return '/skull.png';
+    } else if ( percentFull > 80 ) {
+      return '/red_min.png';
+    } else if ( percentFull > 50 ) {
+      return '/orange_min.png';
+    } else {
+        return '/green_min.png'
+    }
+  }
 
   markerWrapper = () => {
     let arr = [];
@@ -93,7 +104,7 @@ export class MapWrapper extends React.Component {
       return bin.displayed;
     });
     displayedBins.map((bin) => {
-      return arr.push(<Marker key={bin.id} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
+      return arr.push(<Marker key={bin.id} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} icon={this.returnBinImage(bin.percentFull)} />);
     });
       return arr;
   };
