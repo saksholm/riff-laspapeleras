@@ -8,16 +8,16 @@ export class Slider extends React.Component {
     }
 
     render() {
-        return (
-            <div className="slider">
-                <h3 className='parameter'>Parameter: a</h3>
-                <input type="range"
-                       min={this.props.min}
-                       max={this.props.max}
-                       value={this.props.value}
-                       onChange={this.onChange} />
-            </div>
-        )
+
+      return (
+        <div className="slider">
+            <input type="range"
+                   min={this.props.min}
+                   max={this.props.max}
+                   value={this.props.value}
+                   onChange={this.onChange} />
+        </div>
+      )
     }
 }
 

@@ -20,6 +20,7 @@ export default class Bin extends React.Component {
             </div>
             <div className='bin-info'>
               <h1>{data.name}</h1>
+              { data.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
               <IndicatorHeader>{`${data.percentFull}% full`}</IndicatorHeader>
               <BarIndicator>
                 <Indicator width={data.percentFull}/>
@@ -29,7 +30,7 @@ export default class Bin extends React.Component {
 
           <div className='slider-panel'>
             <Sliders data={this.props}/>
-            { data.size < 4 && <Upgrade onUpgrade={ this.onUpgrade }/> }
+
           </div>
         </div>)
     }

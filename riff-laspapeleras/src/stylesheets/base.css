@@ -62,7 +62,9 @@
 
 .bin-info h1 {
   color: #666;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  display: inline;
 }
 
 .percent-full-wrapper {
@@ -70,6 +72,7 @@
   width: 100%;
   height: 30px;
   background: #ddd;
+  font-size: 1rem;
 }
 
 .percent-full {
@@ -87,10 +90,12 @@
 
 .bin-sliders {
   width: 50%;
+  margin-top: 5px;
 }
 
 .slider {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  display: inline;
 }
 
 .slider input {
@@ -105,9 +110,6 @@
   border-radius: 5px;
 }
 
-.buy-upgrade {
-  width: 45%;
-}
 
 input[type=range] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
@@ -218,6 +220,10 @@ input[type=range]:focus::-ms-fill-upper {
 .parameter {
   color: #666;
   margin-bottom: 5px;
+}
+
+.buy-upgrade {
+  float: right;
 }
 
 .buy-upgrade h3 {
