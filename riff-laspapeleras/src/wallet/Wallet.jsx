@@ -6,7 +6,7 @@ const Balance = ({balance}) => <h2>{`PPL coins: ${balance}`}</h2>
 
 const Wallet = ({ balance, fullBins }) => (
   <div className='wallet'>
-    { fullBins <= 3
+    { fullBins < 3
         ? <div>
           <Balance balance={balance}/>
           <FullBins fullBins={fullBins}/>

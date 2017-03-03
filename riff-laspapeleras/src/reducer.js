@@ -62,6 +62,12 @@ const reducer = (state = mockData, action ) => {
         })
       };
 
+    case 'INCREASE_COINS':
+      return {
+          ...state,
+        balance: state.balance + action.num
+      };
+
     default:
       return state;
   }
