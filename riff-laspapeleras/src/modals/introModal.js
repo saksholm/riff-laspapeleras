@@ -20,7 +20,6 @@ export default class IntroModal extends React.Component {
     }
 
     render() {
-        console.log('___-> this.props', this.props);
         return (
             <Modal {...this.props}
                 styles={customStyles}
