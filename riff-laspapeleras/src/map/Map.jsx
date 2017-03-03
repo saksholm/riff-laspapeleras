@@ -72,9 +72,9 @@ export class MapWrapper extends React.Component {
       this.props.dispatch(updateFullBins(fullBins));
     }
     if (fullBins === this.props.maxFullBins) {
-      // alert('YOU LOST!!!!!')
-      // clearInterval(this.mainInterval);
-      // clearInterval(this.binAddingInterval);
+      alert('YOU LOST!!!!!')
+      clearInterval(this.mainInterval);
+      clearInterval(this.binAddingInterval);
     }
   };
 
@@ -85,7 +85,6 @@ export class MapWrapper extends React.Component {
   };
 
   calculateEarnedCoinsBaseOnStatus = (status) => {
-    console.log("STATUS", status);
     if(status < 30 || status === 100) {
       return 0;
     } else if (status >= 30 && status < 80){
@@ -103,10 +102,6 @@ export class MapWrapper extends React.Component {
       this.props.dispatch(emptyBin(id));
       this.props.dispatch(increaseCoins(earnedCoins));
     }
-  };
-
-  selectedPlace = () => {
-
   };
 
   returnBinImage(percentFull) {
@@ -136,7 +131,7 @@ export class MapWrapper extends React.Component {
   render() {
 
     return (<div className="map">
-      <Map google={window.google} zoom={18} minZoom={18} maxZoom={18} initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true} >
+      <Map google={window.google} zoom={17} minZoom={17} maxZoom={17} initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true} >
         {this.markerWrapper()}
         {/*
         <InfoWindow onClose={this.onInfoWindowClose}>
