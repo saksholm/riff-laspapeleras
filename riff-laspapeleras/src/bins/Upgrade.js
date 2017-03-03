@@ -1,10 +1,7 @@
 import React from 'react';
 
 const Upgrade = ({ onUpgrade }) => (
-  <div className='buy-upgrade'>
-    <h3>Upgrade bin</h3>
-    <button className='btn' onClick={onUpgrade}>Buy</button>
-  </div>
+    <button className='btn buy-upgrade' onClick={onUpgrade}>Upgrade</button>
 );
 
 export default Upgrade;
