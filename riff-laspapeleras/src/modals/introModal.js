@@ -47,7 +47,7 @@ export default class IntroModal extends React.Component {
                     <br/><hr/><br/> 
                     <h2> HOW LONG CAN YOU KEEP LAS PALMAS CLEAN? </h2>
 
-                    <button id='button' onClick={this.closeModal}><span>LET'S PLAY</span></button>
+                    <button id='button' onClick={this.closeModal}><span>Let's play!</span></button>
                 </div>
             </Modal>
         )
