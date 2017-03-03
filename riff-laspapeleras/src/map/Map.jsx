@@ -23,7 +23,7 @@ export class MapWrapper extends React.Component {
     // MAIN INTERVAL
     setInterval(() => {
       this.props.bins.map((bin) => {
-        if(bin.percentFull < 100) {
+        if(bin.percentFull < 100 && bin.displayed) {
           const newPercent = this.formula(bin.percentFull, bin.formula);
           this.props.dispatch(updatePercent(bin.id, newPercent));
         }
@@ -31,11 +31,42 @@ export class MapWrapper extends React.Component {
 
       this.countFullBins();
     },1000);
-  }
 
-  formula = (base, formula) => {
-    const value = base + formula.a + formula.b - formula.c;
-    return (value >= 100 ? 100 : value);
+    // BIN ADDING INTERVAL
+    setInterval(() => {
+      let displayedBins = this.props.bins.filter((bin) => {
+        return bin.displayed;
+      });
+      const maxBinsDisplayed = 3;
+      if (displayedBins.length < maxBinsDisplayed) {
+        this.props.bins[displayedBins.length].displayed = true;
+      }
+      displayedBins = this.props.bins.filter((bin) => {
+        return bin.displayed;
+      });
+    }, 5000);
+  }
+  
+  
+
+  formula = (value, formula) => {
+    let change = 5 +  Math.pow(formula[Object.keys(formula)[0]],2) + Math.pow(formula[Object.keys(formula)[1]],3) - (formula[Object.keys(formula)[2]])
+        ;
+    if (change > 7) {
+      change = 7;
+    }
+    if (change < 2) {
+      change = 2;
+    }
+    const randomness = Math.random() > 0.5 ? 1: 0;
+    let newValue = value + change + randomness;
+    if (newValue > 100) {
+      newValue = 100;
+    }
+    if (newValue < 1) {
+      newValue = 1;
+    }
+    return newValue;
   };
 
   countFullBins = () => {
@@ -59,8 +90,10 @@ export class MapWrapper extends React.Component {
 
   markerWrapper = () => {
     let arr = [];
-
-    this.props.bins.map((bin) => {
+    const displayedBins = this.props.bins.filter((bin) => {
+      return bin.displayed;
+    });
+    displayedBins.map((bin) => {
       return arr.push(<Marker key={bin.id} onClick={() => this.onMarkerClick(bin.id)} name={bin.name} position={{lat: bin.location.lat, lng: bin.location.lng }} />);
     });
 

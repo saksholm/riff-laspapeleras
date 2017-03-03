@@ -23,11 +23,6 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
       percentFull: 10
     },
     {
@@ -41,11 +36,6 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
       percentFull: 10
     },
     {
@@ -59,11 +49,6 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
       percentFull: 10
     },
     {
@@ -77,11 +62,6 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
       percentFull: 50
     },
     {
@@ -95,11 +75,6 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
       percentFull: 30,
       size: 100
     },
@@ -115,11 +90,6 @@ const initialState = {
       percentFull: 20,
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
     },
     {
       id: 'biveib8E',
@@ -132,12 +102,7 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 60,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     },
     {
       id: 'noo5dooK',
@@ -150,12 +115,7 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 40,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     },
     {
       id: 'phie8UuF',
@@ -168,12 +128,7 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 80,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     },
     {
       id: 'aTee4uiv',
@@ -187,11 +142,6 @@ const initialState = {
       percentFull: 35,
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      },
       percentFull: 35
     },
     {
@@ -206,11 +156,7 @@ const initialState = {
       percentFull: 15,
       size: 1,
       maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+
     },
     {
       id: 'aegohf0X',
@@ -223,12 +169,7 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 60,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     },
     {
       id: 'Aakeiy4u',
@@ -241,12 +182,7 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 50,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     },
     {
       id: 'omuL9viV',
@@ -259,12 +195,7 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 30,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     },
     {
       id: 'IeWev4ie',
@@ -277,14 +208,17 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       percentFull: 30,
       size: 1,
-      maxSize: 4,
-      formula: {
-        a:5,
-        b:0.5,
-        c:-1
-      }
+      maxSize: 4
     }
   ]
 };
+
+initialState.bins.forEach((bin)=>{
+  bin.formula = {};
+  bin.formula.a = Math.floor(Math.random()*6-3);
+  bin.formula.b = Math.floor(Math.random()*6-3);
+  bin.formula.c = Math.floor(Math.random()*6-3);
+  bin.displayed = false;
+})
 
 export default initialState;

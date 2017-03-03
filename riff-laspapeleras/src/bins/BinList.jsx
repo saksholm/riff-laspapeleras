@@ -8,9 +8,11 @@ class BinList extends React.Component {
     return (
       <div className="binList">
         <Wallet balance={this.props.balance} />
-        {this.props.bins.map((bin) => (
-          <Bin data={bin} key={bin.id} {...this.props}/>
-        ))}
+        {this.props.bins.map((bin) => {
+            if (bin.displayed === true){
+               return <Bin data={bin} key={bin.id} {...this.props}/>
+            }}
+        )}
       </div>
     )
   }

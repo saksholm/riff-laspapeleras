@@ -11,8 +11,8 @@ const Sliders = ({data}) => {
                         {...data}
                         id={data.data.name}
                         parameter={ parameter }
-                        min={ 1 }
-                        max={ 10 }
+                        min={ -3 }
+                        max={ 3 }
                         value={ data.data.formula[parameter]}
                     />
                 </div>

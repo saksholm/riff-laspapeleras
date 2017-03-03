@@ -1,6 +1,5 @@
 import React from 'react';
 import { changeFormula } from '../actions';
-import {connect} from 'react-redux';
 
 export default class Slider extends React.Component {
     onChange = (event) => {
