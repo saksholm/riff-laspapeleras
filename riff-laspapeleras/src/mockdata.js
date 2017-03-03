@@ -13,7 +13,9 @@ const initialState = {
   fullBins: 0,
   timeElapsed: 0,
   maxFullBins: 3,
-  maxBinsDisplayed: 1,
+  maxBinsDisplayed: 15,
+  introModalOpen: true,
+  endModalOpen: false,
   bins: [
     {
       id: 'wei5ooYi',

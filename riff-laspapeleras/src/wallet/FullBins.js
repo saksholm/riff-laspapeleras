@@ -15,10 +15,8 @@ const FullBins = ({ fullBins }) => {
 
   let tempFullBins = fullBins <= 3 ? fullBins : 3;
 
-  const arr = []
+  const arr = [];
   for (let i=1; i<=tempFullBins; i++) { arr.push(i) }
-
-//  console.log(`arr`, arr);
 
   return (
     <div className='full-bins'>

@@ -1,9 +1,10 @@
 import React from 'react';
 import Map, {Marker} from 'google-maps-react';
+import IntroModal from '../modals/introModal.js'
+import EndModal from '../modals/endModal.js';
 
 import {emptyBin, updateCount, updateFullBins, increaseCoins} from '../actions';
 import {connect} from 'react-redux';
-
 
 export class MapWrapper extends React.Component {
 
@@ -11,15 +12,13 @@ export class MapWrapper extends React.Component {
     super(props);
 
     this.state = {
-      selelectedPlace: {
-        name: 'foobar'
-      }
+      introModalOpen: true,
+      endModalOpen: false
     };
 
   }
 
-  componentDidMount() {
-
+  startIntervals = () => {
     this.mainInterval = setInterval(() => {
       this.props.bins.map((bin) => {
         let limit = bin.size * 100;
@@ -144,21 +143,23 @@ export class MapWrapper extends React.Component {
       return arr;
   };
 
-
   render() {
-
-    return (<div className="map">
-      <Map google={window.google} zoom={17} minZoom={17} maxZoom={17} initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true} >
-        {this.markerWrapper()}
-        {/*
-        <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-            <h1>some name</h1>
-          </div>
-        </InfoWindow>
-         */}
-      </Map>
-    </div>)
+    return (
+        <div className="map">
+          <IntroModal onClose={this.startIntervals} dispatch={this.props.dispatch} isOpen={this.props.introModalOpen} />
+          <EndModal isOpen={this.props.endModalOpen} dispatch={this.props.dispatch} />
+          <Map google={window.google} zoom={17} minZoom={17} maxZoom={17}
+               initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true}>
+            {this.markerWrapper()}
+            {/*
+             <InfoWindow onClose={this.onInfoWindowClose}>
+             <div>
+             <h1>some name</h1>
+             </div>
+             </InfoWindow>
+             */}
+          </Map>
+        </div>)
   }
 }
 
@@ -167,7 +168,9 @@ const mapStateToProps = (state) => {
     bins: state.bins,
     fullBins: state.fullBins,
     maxFullBins: state.maxFullBins,
-    maxBinsDisplayed: state.maxBinsDisplayed
+    maxBinsDisplayed: state.maxBinsDisplayed,
+    introModalOpen: state.introModalOpen,
+    endModalOpen: state.endModalOpen
   }
 };
 
