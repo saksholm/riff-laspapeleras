@@ -26,3 +26,8 @@ export const updateFullBins = (num) => ({
   type: 'UPDATE_FULLBINS',
   num
 })
+
+export const increaseCoins = (num) => ({
+  type: 'INCREASE_COINS',
+  num
+});

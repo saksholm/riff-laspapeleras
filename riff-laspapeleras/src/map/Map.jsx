@@ -1,7 +1,7 @@
 import React from 'react';
 import Map, {Marker, InfoWindow} from 'google-maps-react';
 
-import {emptyBin, updatePercent, updateFullBins} from '../actions';
+import {emptyBin, updatePercent, updateFullBins, increaseCoins} from '../actions';
 import {connect} from 'react-redux';
 
 
@@ -76,8 +76,31 @@ export class MapWrapper extends React.Component {
     }
   };
 
+  findBinById = (id) => {
+    return this.props.bins.filter((bin) => {
+      return bin.id === id
+    })[0];
+  };
+
+  calculateEarnedCoinsBaseOnStatus = (status) => {
+    console.log("STATUS", status);
+    if(status < 30 || status === 100) {
+      return 0;
+    } else if (status >= 30 && status < 80){
+      return 1;
+    } else if (status >= 80 && status < 100) {
+      return 2;
+    }
+  };
+
   onMarkerClick = (id) => {
-    this.props.dispatch(emptyBin(id));
+    const binObj = this.findBinById(id);
+
+    if(binObj.percentFull < 100) {
+      const earnedCoins = this.calculateEarnedCoinsBaseOnStatus(binObj.percentFull);
+      this.props.dispatch(emptyBin(id));
+      this.props.dispatch(increaseCoins(earnedCoins));
+    }
   };
 
   selectedPlace = () => {
