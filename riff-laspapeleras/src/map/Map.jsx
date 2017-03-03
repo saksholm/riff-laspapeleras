@@ -151,13 +151,6 @@ export class MapWrapper extends React.Component {
           <Map google={window.google} zoom={17} minZoom={17} maxZoom={17}
                initialCenter={{lat: 28.149344, lng: -15.429630}} zoomControl={false} disableDoubleClickZoom={true}>
             {this.markerWrapper()}
-            {/*
-             <InfoWindow onClose={this.onInfoWindowClose}>
-             <div>
-             <h1>some name</h1>
-             </div>
-             </InfoWindow>
-             */}
           </Map>
         </div>)
   }
