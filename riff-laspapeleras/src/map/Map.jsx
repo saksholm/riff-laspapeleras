@@ -41,9 +41,6 @@ export class MapWrapper extends React.Component {
       if (displayedBins.length < maxBinsDisplayed) {
         this.props.bins[displayedBins.length].displayed = true;
       }
-      displayedBins = this.props.bins.filter((bin) => {
-        return bin.displayed;
-      });
     }, 5000);
   }
   
