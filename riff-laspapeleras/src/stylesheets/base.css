@@ -266,9 +266,25 @@ input[type=range]:focus::-ms-fill-upper {
 
 .modal {
   border:none;
-  padding-top:100px;
+  padding-top:50px;
 }
 
-.ReactModal__Content .ReactModal__Content--after-open .modal {
+.title{
+  padding-left:20px;
+  display: block;
+  margin: auto;
+}
 
+.title h1{
+  display: block;
+  position: relative;
+  font: 150px Helvetica, Sans-Serif;
+  letter-spacing: -3px;
+  color: rgba(0,0,255,0.5);
+}
+
+.title h1:after {
+  content: "Las Papeleras";
+  position: absolute; left: 10px; top: 5px;
+  color: rgba(255,0,0,0.5);
 }

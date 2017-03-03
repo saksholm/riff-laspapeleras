@@ -26,8 +26,10 @@ export default class IntroModal extends React.Component {
                 contentLabel="Protect your city from trash"
                 className="modal"
             >
-                <div className="modal-content">
+                <div className="title">
                     <h1>Las Papeleras</h1>
+                </div>
+                <div className="modal-content">
                     <br/>
                     <hr/>
                     <br/>
