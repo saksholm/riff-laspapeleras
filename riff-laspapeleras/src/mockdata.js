@@ -23,7 +23,8 @@ const initialState = {
       imgUrl: 'https://s3-eu-west-1.amazonaws.com/laspapeleras/small.jpg',
       size: 1,
       maxSize: 4,
-      percentFull: 10
+      percentFull: 10,
+      displayed: true
     },
     {
       id: 'Fa0quohs',
@@ -218,7 +219,7 @@ initialState.bins.forEach((bin)=>{
   bin.formula.a = Math.floor(Math.random()*6-3);
   bin.formula.b = Math.floor(Math.random()*6-3);
   bin.formula.c = Math.floor(Math.random()*6-3);
-  bin.displayed = false;
+  bin.displayed ? null : bin.displayed = false;
 })
 
 export default initialState;
