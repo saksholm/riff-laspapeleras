@@ -7,11 +7,14 @@ import { upgradeBin } from '../actions'
 export default class Bin extends React.Component {
 
     onUpgrade = () => {
-      this.props.dispatch( upgradeBin( this.props.data.id, this.props.upgradePrice ))
-    }
+      if(this.props.balance >= this.props.upgradePrice) {
+        this.props.dispatch( upgradeBin( this.props.data.id, this.props.upgradePrice ))
+      }
+    };
+
 
     render() {
-        const { data } = this.props;
+      const { data } = this.props;
         const disp = data.percentFull; // parseFloat(data.percentFull).toFixed(1);
         return (
         <div className="bin">
@@ -21,7 +24,7 @@ export default class Bin extends React.Component {
             </div>
             <div className='bin-info'>
               <h1>{data.name}, size: {data.size}</h1>
-              { (data.size < 4 && data.percentFull < 100) && <Upgrade onUpgrade={ this.onUpgrade }/> }
+              { (data.size < 4 && data.percentFull < 100 && this.props.balance >= this.props.upgradePrice ) && <Upgrade onUpgrade={ this.onUpgrade }/> }
               <IndicatorHeader>{`${disp}% full`}</IndicatorHeader>
               <BarIndicator>
                 <Indicator width={data.percentFull}/>

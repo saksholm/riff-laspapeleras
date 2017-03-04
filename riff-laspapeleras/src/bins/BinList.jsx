@@ -14,7 +14,7 @@ class BinList extends React.Component {
   render() {
     return (
       <div className="binList">
-        <Wallet balance={this.props.balance} fullBins={this.props.fullBins}/>
+        <Wallet balance={this.props.balance} fullBins={this.props.fullBins} startTime={this.props.startTime}/>
         {this.filterDisplayedBins().map((bin, index) => {
                return <Bin data={bin} key={"bin"+index} {...this.props}/>
             })

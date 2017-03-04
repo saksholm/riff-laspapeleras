@@ -81,6 +81,17 @@ const reducer = (state = mockData, action ) => {
         introModalOpen: !state.introModalOpen
       };
 
+    case 'ADD_DISPLAYED_BINS':
+      return {
+          ...state,
+        maxBinsDisplayed: state.maxBinsDisplayed + action.num
+      };
+
+    case 'ADD_START_TIMESTAMP':
+      return {
+          ...state,
+        startTime: action.time
+      };
     default:
       return state;
   }

@@ -4,7 +4,7 @@ import GameOver from './GameOver'
 
 const Balance = ({balance}) => <h2>{`PPL coins: ${balance}`}</h2>
 
-const Wallet = ({ balance, fullBins }) => (
+const Wallet = ({ balance, fullBins, startTime }) => (
   <div className='wallet'>
     { fullBins < 3
         ? <div>

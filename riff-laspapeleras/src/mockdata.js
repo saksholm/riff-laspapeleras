@@ -7,13 +7,14 @@
  */
 
 const initialState = {
+  startTime: 0,
   upgradePrice: 5,
-  balance: 120,
+  balance: 10,
   totalBins: 15,
   fullBins: 0,
   timeElapsed: 0,
   maxFullBins: 3,
-  maxBinsDisplayed: 15,
+  maxBinsDisplayed: 10,
   introModalOpen: true,
   endModalOpen: false,
   bins: [

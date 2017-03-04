@@ -3,8 +3,9 @@ import Map, {Marker} from 'google-maps-react';
 import IntroModal from '../modals/introModal.js'
 import EndModal from '../modals/endModal.js';
 
-import {emptyBin, updateCount, updateFullBins, increaseCoins} from '../actions';
+import {emptyBin, updateCount, updateFullBins, increaseCoins, addDisplayedBins, addStartTimestamp} from '../actions';
 import {connect} from 'react-redux';
+
 
 export class MapWrapper extends React.Component {
 
@@ -18,7 +19,15 @@ export class MapWrapper extends React.Component {
 
   }
 
+  currentTimestamp = () => {
+    const date = new Date();
+    const timestamp = Math.floor(date.getTime() / 1000);
+    return timestamp;
+  };
+
   startIntervals = () => {
+    this.props.dispatch(addStartTimestamp(this.currentTimestamp()));
+
     this.mainInterval = setInterval(() => {
       this.props.bins.map((bin) => {
         let limit = bin.size * 100;
@@ -30,9 +39,12 @@ export class MapWrapper extends React.Component {
       });
 
       this.countFullBins();
+      this.numOfFullyUpgradedBins();
+
     },1000);
 
     this.binAddingInterval = setInterval(() => {
+
       let displayedBins = this.props.bins.filter((bin) => {
         return bin.displayed;
       });
@@ -40,9 +52,31 @@ export class MapWrapper extends React.Component {
         this.props.bins[displayedBins.length].displayed = true;
       }
     }, 5000);
-  }
-  
-  
+  };
+
+  numOfFullyUpgradedBins = () => {
+    const num = this.props.bins.filter((bin) => {
+      return bin.size === 4;
+    }).length;
+
+    console.log("Fully upgraded", num);
+
+    switch (num) {
+      case 5:
+        // add 1
+        this.props.dispatch(addDisplayedBins(2));
+        break;
+      case 7:
+        // add 1 more
+        this.props.dispatch(addDisplayedBins(1));
+        break;
+      case 10:
+        // add 2 more
+        this.props.dispatch(addDisplayedBins(2));
+        break;
+    }
+
+  };
 
   formula = (value, formula, binSize) => {
     let change = 5 +  Math.pow(formula[Object.keys(formula)[0]],2) + Math.pow(formula[Object.keys(formula)[1]],3) - (formula[Object.keys(formula)[2]])
@@ -87,7 +121,8 @@ export class MapWrapper extends React.Component {
       this.props.dispatch(updateFullBins(fullBins));
     }
     if (fullBins === this.props.maxFullBins) {
-      alert('YOU LOST!!!!!')
+      alert('YOU LOST!!!!!');
+      this.setState({endModalOpen: true});
       clearInterval(this.mainInterval);
       clearInterval(this.binAddingInterval);
     }

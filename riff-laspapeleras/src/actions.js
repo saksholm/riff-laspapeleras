@@ -35,3 +35,13 @@ export const increaseCoins = (num) => ({
 export const closeIntroModal = () => ({
   type: 'CLOSE_INTRO_MODAL',
 });
+
+export const addDisplayedBins = (num) => ({
+  type: 'ADD_DISPLAYED_BINS',
+  num
+});
+
+export const addStartTimestamp = (time) => ({
+  type: 'ADD_START_TIMESTAMP',
+  time
+});
